@@ -1,8 +1,9 @@
 import discord
 import random
+import os
 from discord.ext import commands
 from discord.ext.commands import Bot
-TOKEN = 'NjUwMTE5MTgxMzQ1MzU3ODI0.XeGvuQ._SYEHt5WALfjoSigfTaYT3SrCDM'
+#TOKEN = 'NjUwMTE5MTgxMzQ1MzU3ODI0.XeGvuQ._SYEHt5WALfjoSigfTaYT3SrCDM'
 
 
 Bot = commands.Bot(command_prefix=')')
@@ -39,4 +40,4 @@ async def inf(ctx, user: discord.User):
 async def inf2(ctx, user: discord.User):
 	await ctx.send(user.avatar_url)
 
-Bot.run(TOKEN)
+token = environ.get('BOT_TOKEN')
